@@ -32,7 +32,7 @@ jobs:
       #    sarif_file: ${{ steps.scan.outputs.sarif_file }}
 
       - name: Run Prisma Cloud 
-        id: Prisma Cloud
+        id: pc
         uses: bridgecrewio/checkov-action@master 
         env:
           PRISMA_API_URL: https://api2.prismacloud.io
