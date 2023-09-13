@@ -30,3 +30,12 @@ jobs:
       #  uses: github/codeql-action/upload-sarif@v2
       #  with:
       #    sarif_file: ${{ steps.scan.outputs.sarif_file }}
+
+      - name: Run Prisma Cloud 
+        id: Prisma Cloud
+        uses: bridgecrewio/checkov-action@master 
+        env:
+          PRISMA_API_URL: https://api2.prismacloud.io
+        with:
+          api-key: ${{ secrets.BC_API_KEY }}
+          
