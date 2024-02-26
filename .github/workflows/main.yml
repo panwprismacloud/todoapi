@@ -34,7 +34,7 @@ jobs:
         run: docker tag panwprismacloud/todoapi ${{ secrets.DOCKER_REGISTRY }}/todoapi:latest
 
       - name: Tag Docker image
-        run: docker push ${{ secrets.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        run: docker push ${{ secrets.DOCKER_REGISTRY }}/todoapi:latest
         
       # - name: Run Prisma Cloud 
       #  id: pc
