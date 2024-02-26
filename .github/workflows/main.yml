@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Tag Docker image
-        run: docker tag ${{ env.IMAGE_NAME }} ${{ secrets.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        run: docker tag $IMAGE_NAME ${{ secrets.DOCKER_REGISTRY }}/$IMAGE_NAME:latest
 
       - name: Tag Docker image
         run: docker push ${{ secrets.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
