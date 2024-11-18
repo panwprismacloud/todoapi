@@ -19,7 +19,7 @@ resource "aws_s3_bucket_policy" "open_bucket_policy" {
   bucket = aws_s3_bucket.open_bucket.id
 
   policy = jsonencode({
-    Version : "2012-10-17",
+    Version : "2012-10-19",
     Statement : [
       {
         Effect   : "Allow",
