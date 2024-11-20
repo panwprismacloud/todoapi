@@ -11,6 +11,8 @@ resource "aws_s3_bucket" "open_bucket" {
   tags = {
     Name        = "OpenS3Bucket"
     Environment = "Development"
+    git_repo    = "todoapi"
+    map         = "test"
   }
 }
 
@@ -22,9 +24,9 @@ resource "aws_s3_bucket_policy" "open_bucket_policy" {
     Version : "2012-10-19",
     Statement : [
       {
-        Effect   : "Allow",
-        Principal: "*",
-        Action   : "s3:GetObject",
+        Effect : "Allow",
+        Principal : "*",
+        Action : "s3:GetObject",
         Resource : "${aws_s3_bucket.open_bucket.arn}/*"
       }
     ]
